@@ -8,57 +8,43 @@ namespace Constructor
 {
     internal class Employee
     {
-
-        //public Employee()  //parameterless or default 
-        //{
-        //    Id = 10;
-        //    Name = "Akshay";
-        //    Salary = 10000;
-        //}
-
-
-        //public Employee()
-        //{
-        //    Id = 0;
-        //    Name = null;
-        //    Salary = 0;
-        //}
-
-
-        public Employee(int a)
-        {
-            Id = 10;
-            Name = "Akshay";
-            Salary = 10000;
-        }
-
-
-
-        public void Putdata()
-        {
-
-        }
-
-        public int GetNumber()
-        {
-            return 1;
-        }
-
-
-        public string GetString()
-        {
-            return "abc";
-        }
-
-
         public int Id { get; set; }
         public string Name { get; set; }
-        public int Salary { get; set; }     
-        
+        public int Salary { get; set; }
+
+        public static int IncomeTax { get; set; }
 
 
+        public Employee()  //parameterless or default constructor
+        {
+            this.Id = 10;
+            this.Name = "Akshay";
+            this.Salary = 10000;
+        }
+
+        public Employee(int id, string name, int salary)  //parameterized constructor
+        {
+            this.Id = id;
+            this.Name = name;
+            this.Salary = salary;
+        }
 
 
+        public Employee(Employee emp)//copy constructor
+        {
+            this.Id = emp.Id;
+            this.Name = emp.Name;
+            this.Salary = emp.Salary;
+        }
+
+
+        public void Showdata()
+        {
+            Console.WriteLine("Id =" + this.Id);
+            Console.WriteLine("Name =" + this.Name);
+            Console.WriteLine("salary =" + this.Salary);
+
+        }
 
     }
 }
