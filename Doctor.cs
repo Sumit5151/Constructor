@@ -20,7 +20,7 @@ namespace Constructor
         }
 
 
-        public Doctor()           //:this(11,"Amit","BAMS")
+        public Doctor()         //:this(11,"Amit","BAMS")
         {
             this.Id = 10;
             this.Name = "Munnabai";
